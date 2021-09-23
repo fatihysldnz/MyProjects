@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+
+.ustmenu {
+  background-color: gray;
+}
+
+.header div,
+.ustmenu div {
+  display: inline-block;
+  width: 48.5%;
+  padding: 5px;
+  color: white;
+}
+
+.header {
+  background-color: rgb(201, 195, 195);
+  position: sticky; /*ust menu sayfada hep kalsin diye yazilir */
+  top: 0;
+}
+
+.header .menu,
+.login {
+  text-align: right;
+}
+
+.ustmenu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a {
+  color: rgb(3, 3, 3);
+  text-decoration: none;
+}

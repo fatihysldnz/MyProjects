@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formlar</title>
+  </head>
+  <body>
+    <h1>Kayit Formu</h1>
+    <form action="server/kayit.java">
+      <input type="hidden" name="id" value="123456" />
+      <!--gizli yollanmasi gereken bilgileri hidden ile saklama-->
+
+      <p>
+        <label for="ad">Adiniz</label>
+        <input
+          id="ad"
+          name="ad"
+          type="text"
+          placeholder="Adinizi giriniz"
+          value="Fatih"
+        />
+      </p>
+      <!-- inputlara name kodu ekledigimizde database e gonderir-->
+
+      <p>
+        <label for="soyad">Soyadiniz</label>
+        <input
+          id="soyad"
+          type="text"
+          placeholder="Soyadinizi giriniz"
+          required
+        />
+      </p>
+
+      <p>
+        <label for="mail"> E-mail</label>
+        <input type="email" id="mail" />
+      </p>
+
+      <p>
+        <label for="sifre">Sifreniz</label>
+        <input id="sifre" name="sifre" type="password" required minlength="6" />
+      </p>
+
+      <p>
+        <label for="deneyim"> Deneyim</label>
+        <input type="number" id="deneyim" min="0" max="30" />
+      </p>
+
+      <p>
+        <label>Hobileriniz:</label>
+        <br />
+
+        <input
+          type="checkbox"
+          name="futbol"
+          id="futbol"
+          value="futbol"
+          checked
+        />
+        <!--checked yazilinca otomatik check yaparak geliyor-->
+        <label for="futbol">Futbol</label><br />
+
+        <input
+          type="checkbox"
+          name="basket"
+          id="basket"
+          value="basketbol"
+        /><label for="basket">Basketbol</label><br />
+
+        <input
+          type="checkbox"
+          name="voleybol"
+          id="voleybol"
+          value="voleybol"
+        /><label for="voleybol">Voleybol</label><br />
+      </p>
+
+      <p>
+        <label for="cinsiyet">Cinsiyet</label> <br />
+        <input type="radio" id="erkek" name="cinsiyet" value="erkek" />
+        <label for="erkek">Erkek</label>
+
+        <input type="radio" id="kadin" name="cinsiyet" value="kadin" />
+        <label for="kadin">Kadin</label>
+      </p>
+
+      <p>
+        <label for="medeni">Medeni Hali</label> <br />
+        <input type="radio" id="evli" name="medeni" value="evli" />
+        <label for="evli">Evli</label><br />
+
+        <input type="radio" id="bekar" name="medeni" value="bekar" />
+        <label for="bekar">Bekar</label>
+      </p>
+
+      <p>
+        <label for="">Avatar</label>
+        <input type="file" name="avatar" id="avatar" />
+      </p>
+      <!--avatar icin file kullandik, bir dosya secmek icin-->
+
+      <p>
+        <label for="dt">Dogum Tarihi</label>
+        <input type="date" name="dt" id="dt" />
+      </p>
+
+      <p>
+        <label for="dogum_yeri">Dogum Yeri</label>
+        <select name="dogum" id="dogum_yeri">
+          <option value="1">Adana</option>
+          <option value="2">Adiyaman</option>
+          <option value="3">Afyon</option>
+          <option value="4">Agri</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="adres">Adres</label><br />
+        <textarea name="adres" id="adres" cols="50" rows="6"></textarea>
+      </p>
+
+      <p>
+        <label for="ara"> Ara</label>
+        <input type="search" id="ara" />
+      </p>
+
+      <p>
+        <input type="submit" value="Gonder" />
+        <!-- submit belirttigimiz database e gonderir-->
+        <input type="button" value="Kontrol Et" disabled />
+        <!-- buton tek basina bir sey ifade etmez javascriptten ozellik atamamiz gerekir-->
+        <input type="reset" value="Temizle" />
+        <!-- reset silmek icin kullanilir-->
+      </p>
+    </form>
+  </body>
+</html>

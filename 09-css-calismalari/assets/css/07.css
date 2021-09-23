@@ -1,0 +1,14 @@
+.kutu1 {
+  background-color: blueviolet;
+  padding: 15px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.kutu2 {
+  background-color: chartreuse;
+  padding: 30px;
+
+  margin: 30px 10px 50px 20px;
+  /*ust sag alt sol*/
+}
